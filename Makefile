@@ -232,3 +232,6 @@ verify-artifacts:
 		test -f $(target_dir)/$$filename || (echo could not find $$filename; exit 1;) \
 	done
 	test -f $(dabl_meta) || (echo could not find $(dabl_meta); exit 1;) \
+
+run_daml_script:
+	daml script --participant-config participants.json --json-api --dar .daml/dist/da-marketplace-0.0.2.dar --script-name Setup:initialize --input-file ledger-parties.json

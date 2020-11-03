@@ -13,3 +13,6 @@ yarn-debug.log*
 yarn-error.log*
 yarn.lock
 daml.js/
+
+ledger-parties.json
+participants.json
